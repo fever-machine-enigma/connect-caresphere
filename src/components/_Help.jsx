@@ -1,11 +1,14 @@
+import { BiLogoMessenger, BiLogoLinkedinSquare, BiLogoGithub, BiLogoFacebookSquare, BiLogoWhatsapp, BiLogoTwitter, BiLogoGmail       } from "react-icons/bi";
+
 export default function _Help() {
   return (
-    <main className="scrollbarStyle p-2 flex flex-col justify-between gap-3">
+    <main className="scrollbarStyle p-2 flex flex-row justify-between gap-3">
+      
+      <div className="w-3/4 text-xl flex flex-col gap-3">
       <header className="flex flex-col gap-3">
         <h1 className="font-Inter font-bold text-5xl">Help & Support</h1>
-        <hr className="w-3/4 border-1 border-gray-500" />
+        <hr className=" border-1 border-gray-500" />
       </header>
-      <div className="w-3/4 text-xl flex flex-col gap-3">
         <p>
         Welcome to the Help and Support section of Caresphere | Connect – your dedicated healthcare portal system designed to seamlessly connect patients, healthcare providers, and administrators. At Caresphere | Connect, we understand the importance of providing a comprehensive support system to ensure a smooth and efficient experience for all users.
         </p>
@@ -15,7 +18,7 @@ export default function _Help() {
         <p>
         In this section, you'll find a wealth of information, tutorials, and guides to help you:
         </p>
-        <ul className="flex flex-col gap-3">
+        <ul className="text-lg flex flex-col gap-3 font-Inter">
           <li>
             <span className="font-bold">Get Started</span>
             <li>New to Caresphere | Connect? Explore our step-by-step guides to create your account, set up your profile, and familiarize yourself with the portal's interface.</li>
@@ -41,6 +44,39 @@ export default function _Help() {
             <li>Need personalized assistance? Our dedicated support team is available to address your specific concerns. Reach out through our contact channels, and we'll ensure a prompt and helpful response.</li>
           </li>
         </ul>
+      </div>
+      <div className="w-1/4 p-2 border-l-[0.5px] border-gray-600 flex-1">
+        <header className="flex flex-col gap-1">
+        <h1 className="font-Inter font-bold text-5xl text-center">Want to talk?</h1>
+        <hr className=" border-1 border-gray-500" />
+      </header>
+      <p className="px-2 py-4 text-lg">
+        If you want to contact us or ask for some additional questions not in the FAQ, you can hit us up on these places!
+      </p>
+      <div className="grid grid-row-3 grid-cols-4 ">
+      <button className="transition ease-in-out duration-200 hover:text-bgDark/70">
+      <BiLogoMessenger size={70}/>
+      </button>
+      <button className="transition ease-in-out duration-200 hover:text-bgDark/70">
+      <BiLogoLinkedinSquare size={70}/>
+      </button>
+      <button className="transition ease-in-out duration-200 hover:text-bgDark/70">
+      <BiLogoGithub size={70}/>
+      </button>
+      <button className="transition ease-in-out duration-200 hover:text-bgDark/70">
+      <BiLogoFacebookSquare size={70}/>
+      </button>
+      <button className="transition ease-in-out duration-200 hover:text-bgDark/70">
+      <BiLogoTwitter size={70}/>
+      </button>
+      <button className="transition ease-in-out duration-200 hover:text-bgDark/70">
+      <BiLogoGmail size={70}/>
+      </button>
+      <button className="transition ease-in-out duration-200 hover:text-bgDark/70">
+      <BiLogoWhatsapp size={70}/>
+      </button>
+      
+      </div>
       </div>
     </main>
   );

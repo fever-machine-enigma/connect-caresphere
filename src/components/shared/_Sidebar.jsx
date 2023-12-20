@@ -7,11 +7,23 @@ import { BiLogOut } from "react-icons/bi";
 import doc1 from "../../../public/doctor-img/doc1.jpg";
 import doc2 from "../../../public/doctor-img/doc2.jpg";
 import doc3 from "../../../public/doctor-img/doc3.jpg";
+import { useState, useEffect } from "react";
 
 const linkClasses =
   "hover:bg-[#103147] hover:rounded-3xl flex items-center mt-2 gap-4 font-Inter px-7 py-2 text-base ";
 
 const _Sidebar = () => {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    // Update the currentYear every second
+    const intervalId = setInterval(() => {
+      setCurrentYear(new Date().getFullYear());
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
   const navigate = useNavigate();
   return (
     <div className="font-Inter bg-bgDark w-72 p-3 flex flex-col gap-2 text-textDark">
@@ -23,11 +35,11 @@ const _Sidebar = () => {
           <SidebarkLink key={item.key} item={item} />
         ))}
       </div>
-      <div className="flex flex-col gap-2 p-2 bg-bgLight rounded-xl overflow-auto">
-        <div className="transition ease-in-out duration-200 p-4 rounded-full bg-bgDark h-24 w-full text-textDark cursor-pointer hover:bg-indigo-900">
+      <div className="w-5/6 ml-6  flex flex-col gap-2 p-2 bg-bgLight rounded-3xl overflow-auto">
+        <div className="transition ease-in-out duration-200 p-4 rounded-full bg-bgDark h-20 w-full text-textDark cursor-pointer hover:bg-indigo-900">
           <div className="flex gap-4">
             <img
-              className="h-16 w-16 object-cover rounded-full ring-2 ring-green-500"
+              className="h-12 w-12 object-cover rounded-full ring-2 ring-green-500"
               src={doc1}
               alt=""
             />
@@ -37,10 +49,10 @@ const _Sidebar = () => {
             </div>
           </div>
         </div>
-        <div className="transition ease-in-out duration-200  p-4 rounded-full bg-bgDark h-24 w-full text-textDark cursor-pointer hover:bg-indigo-900">
+        <div className="transition ease-in-out duration-200  p-4 rounded-full bg-bgDark h-20 w-full text-textDark cursor-pointer hover:bg-indigo-900">
           <div className="flex gap-4">
             <img
-              className="h-16 w-16 object-cover rounded-full ring-2 ring-red-500"
+              className="h-12 w-12 object-cover rounded-full ring-2 ring-red-500"
               src={doc2}
               alt=""
             />
@@ -50,10 +62,10 @@ const _Sidebar = () => {
             </div>
           </div>
         </div>
-        <div className="transition ease-in-out duration-200 p-4 rounded-full bg-bgDark h-24 w-full text-textDark cursor-pointer hover:bg-indigo-900">
+        <div className="transition ease-in-out duration-200 p-4 rounded-full bg-bgDark h-20 w-full text-textDark cursor-pointer hover:bg-indigo-900">
           <div className="flex gap-4">
             <img
-              className="h-16 w-16 object-cover rounded-full ring-2 ring-yellow-500"
+              className="h-12 w-12 object-cover rounded-full ring-2 ring-yellow-500"
               src={doc3}
               alt=""
             />
@@ -79,6 +91,9 @@ const _Sidebar = () => {
           </span>
           <span className="text-xl ">Logout</span>
         </div>
+        <footer className="text-center text-[12px]">
+          {currentYear} &copy; CareSphere
+        </footer>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { BiChat, BiBell } from "react-icons/bi";
 import { Fragment } from "react";
 import classNames from "classnames";
 import profileimg from "../../../public/profileimg.jpg";
-import hospitalImage from "../../../public/asgar-ali-hospital.webp";
+import hospitalImage from "../../../public/placeholder.png";
 import userData from "../../../data/user/db.json";
 
 import { useNavigate } from "react-router-dom";
