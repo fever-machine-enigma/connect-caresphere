@@ -62,11 +62,11 @@ const Landing = () => {
   const darkMode = prefersDarkMode ? logoLight : logoDark;
 
   return (
-    <main className="text-textLight dark:text-textDark bg-bgLight dark:bg-bgDark scroll-smooth w-screen lg:max-w-5xl">
-      <div id="home" className="min-h-screen">
-        <header className="p-4 font-Inter flex flex-col md:flex-row">
+    <body className="text-textLight dark:text-textDark bg-bgLight dark:bg-bgDark scroll-smooth">
+      <div id="home" className="min-h-screen max-w-full">
+        <header className="p-4 font-Inter flex flex-row justify-between">
           <img className="px-4 w-96" src={darkMode} alt="" />
-          <ul className="hidden lg:flex text-lg flex-row gap-8 items-center ">
+          <ul className="text-lg w-15 flex flex-row gap-16 items-center ">
             <li>About</li>
             <li>Pricing</li>
             <li>Contact</li>
@@ -79,27 +79,26 @@ const Landing = () => {
           </ul>
         </header>
         <div id="hero" className="flex flex-row justify-center items-start">
-          <div className="h-1/5 flex flex-col gap-5 items-center justify-center w-screen mg:w-1/2">
-            <h1 className="font-InterTight font-bold text-6xl">
+          <div className="flex flex-col justify-center w-1/2 ml-40 mt-52">
+            <h1 className=" font-InterTight font-bold text-7xl">
               <span className="bg-gradient-to-r from-accentDark to-primaryDark text-transparent bg-clip-text">
                 CareSphere
               </span>
               : Nurturing Wellness, Connecting Hearts.
             </h1>
-            <p className="text-2xl font-Inter">
+            <p className="mt-8 text-2xl text-start font-Inter">
               Your Portal to Compassionate Healthcare Excellence.
             </p>
-
-            <div className="flex flex-row font-Inter gap-4">
-              <button className="transition ease-in-out delay-50 bg-primaryLight dark:bg-green-400 hover:scale-x-110 hover:scale-y-110 hover:bg-green-500 text-textLight hover:text-textDark text-lg p-3  rounded-full">
+            <div className="mt-8  flex flex-row font-Inter gap-8">
+              <button className="transition ease-in-out delay-50 bg-primaryLight dark:bg-green-400 hover:scale-x-110 hover:scale-y-110 hover:bg-green-500 text-textLight hover:text-textDark text-lg w-60 h-12  rounded-3xl">
                 Learn More
               </button>
-              <button className="transition ease-in-out delay-50 bg-primaryLight dark:bg-primaryDark hover:scale-x-110 hover:scale-y-110 hover:bg-primaryLight text-textLight hover:text-textDark text-lg p-3  rounded-full">
+              <button className="transition ease-in-out delay-50 bg-primaryLight dark:bg-primaryDark hover:scale-x-110 hover:scale-y-110 hover:bg-primaryLight text-textLight hover:text-textDark text-lg w-60 h-12  rounded-3xl">
                 Our Prices
               </button>
             </div>
           </div>
-          <div className="hidden md:block relative w-1/2">
+          <div className="relative w-1/2">
             <div className="">
               {heroImages.map((heroImage, index) => (
                 <div
@@ -109,7 +108,7 @@ const Landing = () => {
                   }`}
                 >
                   <img
-                    className=" rounded-2xl object-cover"
+                    className="rounded-2xl object-cover"
                     src={heroImage}
                     alt={`Hero Image - ${index + 1}`}
                   />
@@ -119,7 +118,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div id="about" className="min-h-screen max-w-8 flex flex-row">
+      <div id="about" className="min-h-screen max-w-full flex flex-row">
         <div className="font-InterTight font-bold w-1/6 text-[300px] flex flex-col items-center justify-end mb-64">
           <h1 className="about-text -rotate-90 relative -left-[500px]">
             About
@@ -389,7 +388,7 @@ const Landing = () => {
           <p className="font-InterTight text-xl">BACK TO TOP</p>
         </div>
       </footer>
-    </main>
+    </body>
   );
 };
 
