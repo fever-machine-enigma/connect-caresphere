@@ -61,8 +61,8 @@ export default function _Medication() {
     )
   );
   return (
-    <main className="bg-bgDark h-full rounded-3xl p-2">
-      <nav className="flex justify-between items-center h-36">
+    <main className="bg-bgDark h-full rounded-3xl p-2 overflow-hidden">
+      <nav className="flex justify-between items-center h-1/5">
         <div>
           <img className="h-32" src={logoPharma} alt="Pharma Logo" />
         </div>
@@ -92,12 +92,12 @@ export default function _Medication() {
           </Link>
         </div>
       </nav>
-      <section className="bg-bgLight h-[690px] overflow-auto scrollbarStyle rounded-2xl p-4 flex gap-2 flex-wrap">
+      <section className="bg-bgLight overflow-auto h-4/5 flex-1 scrollbarStyle rounded-2xl p-2 flex gap-2 flex-wrap">
         {filteredMeds.map((meds) => (
           <div
             key={meds.id}
             id="cardContainer"
-            className="transition ease-in-out duration-150 h-[400px] w-[290px] border-4 border-gray-600 hover:bg-accentDark flex flex-col items-center justify-center rounded-2xl gap-4 cursor-pointer"
+            className="transition ease-in-out duration-150 h-[400px] w-[293px] border-4 border-gray-600 hover:bg-accentDark flex flex-col items-center justify-center rounded-2xl gap-4 cursor-pointer"
             onClick={() => handleProfileView(meds)}
           >
             <div id="medImg">

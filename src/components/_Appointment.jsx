@@ -94,11 +94,11 @@ const _Appointment = () => {
             </button>
           </div>
         </header>
-        <div className="p-4 rounded-3xl flex flex-col h-full bg-bgDark">
-          <header className="font-Inter font-bold text-4xl text-textDark mb-4">
+        <div className="p-4 rounded-3xl flex flex-col h-5/6 bg-bgDark">
+          <header className=" font-Inter font-bold text-4xl text-textDark mb-4">
             Doctors
           </header>
-          <div className="p-2 flex-wrap gap-2 flex bg-bgLight rounded-2xl h-[680px] overflow-auto scrollbarStyle">
+          <div className="p-2  flex-wrap gap-2 flex bg-bgLight rounded-2xl overflow-auto scrollbarStyle">
             {filteredDoctors.map((user) => (
               <div
                 className={`p-2 gap-2 hover:bg-accentDark transition ease-in-out duration-200 cursor-pointer flex  justify-center flex-row h-72 border-textLight rounded-2xl border-2 w-[227px] ${
