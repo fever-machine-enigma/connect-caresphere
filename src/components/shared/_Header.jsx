@@ -251,8 +251,8 @@ export default function _Header() {
             leaveTo="transform opacity-0 scale-95"
           >
             <Menu.Items className="origin-top-right z-10 absolute right-0 mt-4 w-48 rounded-xl shadow-lg p-1 bg-bgLight ring-1 ring-black ring-opacity-5 focus:outline-none flex flex-col items-start font-Inter">
-              <span className="font-bold px-4 pt-2">Shafin Rahman</span>
-              <span className="px-4 mb-4">Developer</span>
+              <span className="font-bold px-4 pt-2 flex gap-1 items-center">Shafin Rahman </span>
+              <span className="px-4 mb-4 flex gap-1 items-center">Patient <div className={classNames(selectedStatus == "active" ? "bg-green-600 px-2 py-1 rounded-full text-sm text-white": selectedStatus == "away" ? "bg-yellow-500 px-2 py-1 rounded-full text-sm text-white" : selectedStatus == "ignore" ? "bg-red-600 px-2 py-1 rounded-full text-sm text-white" : selectedStatus == "dnd" ? "bg-slate-500 px-2 py-1 rounded-full text-sm text-white" : "bg-green-500 px-2 py-1 rounded-full text-sm text-white" )} >{selectedStatus} </div></span>
               <hr className="px-4 w-full border-1 border-bgDark" />
               <Menu.Item className="mt-2">
                 {({ active }) => (

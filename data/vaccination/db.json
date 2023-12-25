@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "vacName": "Hep-A-HepB",
+        "vacImg": "../../public/vaccine-img/hepa.jpg",
+        "vacDesc": "Hepatitis A",
+        "dosage": "The first dose is recommended within 24 hours of birth with either two or three more doses given after that. This includes those with poor immune function such as from HIV/AIDS and those born premature."
+    },
+    {
+        "id": 2,
+        "vacName": "Hep-B",
+        "vacImg": "../../public/vaccine-img/hepb.jpg",
+        "vacDesc": "Hepatitis B",
+        "dosage": "The first dose is given at any chosen date. The second dose is usually administered 1 to 2 months after the first dose. The third dose is after 6 months of the first one."
+    },
+    {
+        "id": 3,
+        "vacName": "RV-1",
+        "vacImg": "../../public/vaccine-img/rv1.webp",
+        "vacDesc": "Rotavirus",
+        "dosage": "The first dose is recommended within 24 hours of birth with either two or three more doses given after that. This includes those with poor immune function such as from HIV/AIDS and those born premature."
+    },
+    {
+        "id": 4,
+        "vacName": "MMR",
+        "vacImg": "../../public/vaccine-img/mmr.jpg",
+        "vacDesc": "Measles, Mumps, Rubella",
+        "dosage": "The first dose is recommended within 24 hours of birth with either two or three more doses given after that. This includes those with poor immune function such as from HIV/AIDS and those born premature."
+    },
+    {
+        "id": 5,
+        "vacName": "VAR",
+        "vacImg": "../../public/vaccine-img/var.jpg",
+        "vacDesc": "Varicella",
+        "dosage": "The first dose is recommended within 24 hours of birth with either two or three more doses given after that. This includes those with poor immune function such as from HIV/AIDS and those born premature."
+    },
+    {
+        "id": 6,
+        "vacName": "YF",
+        "vacImg": "../../public/vaccine-img/yf-vax.jpg",
+        "vacDesc": "Yellow Fever",
+        "dosage": "The first dose is recommended within 24 hours of birth with either two or three more doses given after that. This includes those with poor immune function such as from HIV/AIDS and those born premature."
+    }
+]

@@ -1,6 +1,7 @@
 import splashImage from "../../public/login-register/registerSplash.jpg";
 import { useRef, useState, useEffect } from "react";
 import { BiCheck, BiErrorCircle } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -8,6 +9,7 @@ const EML_REGEX =
   /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
 
 const _Register = () => {
+  const navigate = useNavigate();
   const userRef = useRef();
   const emailRef = useRef();
   const errRef = useRef();
@@ -74,7 +76,7 @@ const _Register = () => {
   };
 
   return (
-    <main className="bg-bgLight dark:bg-bgDark min-h-screen flex flex-col items-center justify-center">
+    <main className="bg-bgLight dark:bg-bgDark min-h-screen flex flex-col items-center justify-center relative">
       {/* splash image */}
 
       {/* register container */}
@@ -277,22 +279,27 @@ const _Register = () => {
             >
               Register
             </button>
-            <div className="font-Inter relative w-full mt-4">
-              <p className="text-xs">
+            <div className="font-Inter relative w-full mt-4 flex flex-col gap-3">
+              <p className="text-sm">
+                Already have an account?{" "}
+                <span className="font-bold cursor-pointer" onClick={() => navigate("/login")}>Click here to login</span>.
+              </p>
+              <p className="text-sm">
                 *If you have partaken any services of a healthcare provider,
                 they will have provided you with a referral key to make your
                 account on their CareSphere network.
               </p>
-              <p className="text-xs mt-2">
+              <p className="text-sm">
                 *Use this key to sign up on{" "}
-                <span className="font-bold">CareSphere | Connect</span>.
+                <span className="font-bold cursor-pointer" onClick={() => navigate("/home")}>CareSphere | Connect</span>.
               </p>
+              
             </div>
           </form>
         </div>
       </div>
 
-      <footer className="mt-2 relative bottom-0  left-[400px] font-InterTight text-textLight dark:text-textDark">
+      <footer className="absolute bottom-6 right-[400px] font-InterTight text-textDark dark:text-textLight">
         <h1>Coded with ❤️ for CSE347 (4)</h1>
       </footer>
     </main>

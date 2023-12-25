@@ -43,9 +43,9 @@ const _Sidebar = () => {
               src={doc1}
               alt=""
             />
-            <div className="flex flex-col gap-2 justify-center">
-              <h1 className="fontInter font-bold">M.Susan</h1>
-              <p className="fontInter ">So I was won...</p>
+            <div className="flex flex-col justify-center">
+              <h1 className="fontInter font-bold flex items-center gap-1">M.Susan <div className="w-2 h-2 bg-green-600 rounded-full"></div></h1>
+              <p className="fontInter ">So I was..</p>
             </div>
           </div>
         </div>
@@ -56,9 +56,9 @@ const _Sidebar = () => {
               src={doc2}
               alt=""
             />
-            <div className="flex flex-col gap-2 justify-center">
-              <h1 className="fontInter font-bold">S.Miller</h1>
-              <p className="fontInter ">Hello, I'm...</p>
+            <div className="flex flex-col justify-center">
+              <h1 className="fontInter font-bold flex items-center gap-1">S.Miller<div className="w-2 h-2 bg-red-500 rounded-full"></div></h1>
+              <p className="fontInter">Hello, I'm...</p>
             </div>
           </div>
         </div>
@@ -69,8 +69,8 @@ const _Sidebar = () => {
               src={doc3}
               alt=""
             />
-            <div className="flex flex-col gap-2 justify-center">
-              <h1 className="fontInter font-bold">P.Badrul</h1>
+            <div className="flex flex-col justify-center">
+              <h1 className="fontInter font-bold flex items-center gap-1">P.Badrul <div className="w-2 h-2 bg-slate-600 rounded-full"></div></h1>
               <p className="fontInter ">When are yo...</p>
             </div>
           </div>

@@ -1,21 +1,10 @@
 import { useState } from "react";
 import prescriptionData from "../../data/prescription/db.json";
-import { Dialog } from "@headlessui/react";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { BiSearch, BiListUl } from "react-icons/bi";
 
 export default function _Prescription() {
-  let [isOpen, setIsOpen] = useState(true);
-  const [selectedDate, setSelectedDate] = useState(null);
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
+  
   const [selectedCard, setSelectedCard] = useState(null);
 
   const handleProfileView = (user) => {
